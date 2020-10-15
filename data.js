@@ -42,7 +42,7 @@ export default [
     },
     {
         id: 'zombie',
-        title: 'A zzombie'
+        title: 'A zzombie',
         map: {
 
         },
@@ -85,7 +85,7 @@ export default [
             map: {
 
             },
-            prerequisites: ['monster', 'zombie'];
+            prerequisites: ['monster', 'zombie'],
             image: 'home.png',
             description: `
             As you arrive home you notine the door is open. Do you go in?
@@ -102,7 +102,7 @@ export default [
                 result: 'Oh no! My zombie bites before you get in and you and you take 50 hp damage',
                 hp: -50,
                 gold: 0
-            } {
+            }, {
                 id: 'blow up',
                 description: 'Just blow it up!',
                 result: 'After your previous encounter you decide to blow it up! Resulting in finding a 100 gold pieces.',
