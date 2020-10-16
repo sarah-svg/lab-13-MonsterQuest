@@ -1,50 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/home.css">
-    <title>Document</title>
+    <title>Monster Quest</title>
+    <link rel="stylesheet" href="common/main.css">
+    <link rel="stylesheet" href="home/home.css">
 </head>
-
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
+        <h1>Monster Quest</h1>
     </header>
-    <main>
-        <section class="main-section">
-            <img class="main-logo" src="assets/alchemy-logo.png"/>
-         <form>
-             <label>
-                 name
-                 <input name="name" />
-             </label>
-             <label>
-                 class
-                 <select name="charactor">
-                     <option value="jock">Jock</option> 
-                     <option value="nerd">Nerd</option>
-                     <option value="cheerleader">Cheerleader</option>
-                     <option value="loner">Loner</option>
-                 </select>
-             </label>
-             <button>On to the quest</button>
-         </form>
-
-        </section>
+    
+    <main> 
+        <h2>
+            Start Here Monster Quest!
+        </h2>
+        <form id="sign-in">
+            <p class="text">
+                <label for="name">Your Character Name:</label>
+                <input id="name" name="name" required>
+            </p>
+            <fieldset>
+                <legend>Pick Your character:</legend>
+                <p id="characters">
+                    <label>
+                        <img src="assets/avatars/fred.png">
+                        <input type="radio" name="character" required value="fred">
+                        
+                        Fred
+                    </label>
+                    <label> 
+                        <img src="assets/avatars/daphine.png">
+                        <input type="radio" name="character" required value="daphine">
+                       
+                        Daphine
+                    </label>
+                    <label>  
+                         <img src="assets/avatars/velma.png">
+                        <input type="radio" name="character" required value="velma">
+                     
+                        Velma
+                    </label>
+                    <label>
+                         <img src="assets/avatars/scooby.png">
+                        <input type="radio" name="character" required value="Shaggy&Scooby">
+                       
+                        Shaggy&Scooby
+                    </label>
+                </p>
+            </fieldset>
+            <button>Start Monster Quest</button>
+        </form>
     </main>
+
     <footer>
-        <div class="copy gutter-right">&copy; 2020 Alchemy Code Lab</div>
+       
     </footer>
 
-    <script type="module" src="app.js"></script>
+    <script type="module" src="home/home.js"></script>
 </body>
-
 </html>

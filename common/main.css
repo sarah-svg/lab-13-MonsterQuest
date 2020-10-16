@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Heebo|Oswald');
+
+body {
+    font-family:fantasy;
+    background: teal;
+    margin: 0;
+}
+
+h1, h2 {
+    font-family: 'sans-serif';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.hidden {
+    display: none;
+}
+
+header, main {
+    padding: 10px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: plum;
+    border-bottom: 2px solid purple;
+}
+
+h1 {
+    margin: 20px;
+    flex-grow: 2;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0; right: 0;
+    height: 65px;
+    background: paleturquoise;
+    text-align: center;
+    padding-top: 25px;
+}
+
+main {
+    margin-bottom: 50px;
+}
+
+
+input, fieldset, button {
+    border: 10px solid paleturquoise;
+    
+}
+
+button {
+    margin: 20px ;
+    padding: 20px;
+    font-size: 1em;
+    font-weight: bolder;
+    
+}
