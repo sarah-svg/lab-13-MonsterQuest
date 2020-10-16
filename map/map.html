@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/reset.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/map.css">
+
+    <title>Monster Quest!</title>
+</head>
+<body>
+    <header class = 'flex''>
+        <label id='title' >Monster Quest!</label>
+        <div class = 'flex' right-margin'>
+            <div class='flex' right-margin'>
+                <label id=user-name></label>
+                <img id='avatar' class='char-icon'>
+            </div>
+            <div class='flex-column'>
+                <div class='flex' bottom-margin'>
+                    <img class = 'life-assets' src='../assets/food.png'>
+                    <label id='food-val'></label>
+                </div>
+                <div class='flex''>
+                    <img class = 'life-assets' src='../assets/snacks.png'>
+                    <label id='snack-val'></label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id='img-group'>
+            <a href='../scenario/scenario.html?id=rome'><img id='rome' height='50' width=50 src='../assets/quests/dragon.png'></a>
+            <a href='../scenario/scenario.html?id=travel'><img id='travel' height='50' width=50 src='../assets/quests/monster.png'></a>
+            <a href='../scenario/scenario.html?id=castle'><img id='castle' height='50' width=50 src='../assets/quests/cat.png'></a>
+            <a href='../scenario/scenario.html?id=clown'><img id='clown' height='50' width=50 src='../assets/quests/clown.png'></a>
+            <img id='map' src='../assets/quests/map.jpg'>
+
+        </div>
+    </main>
+    <footer>
+  
+    </footer>
+    <script type="module" src="map.js"></script>
+</body>
+</html>

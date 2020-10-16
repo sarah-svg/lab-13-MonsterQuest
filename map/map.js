@@ -1,36 +1,14 @@
-import { getUser } from '../data/api.js';
-import quests from '../data/quest-data.js';
-import loadProfile from '../common/load-profile.js';
-import createLink from './create-quest-link.js';
-import createCompletedQuest from './create-completed-quest.js';
-import hasCompletedAllQuests from './has-completed-all-quests.js';
-import isDead from '../common/is-dead.js';
+import { getFromLocalStorage } from '../utils.js';
 
-loadProfile(); 
+const goldDiv = document.getElementById('snack-val');
+const repDiv = document.getElementById('food-val');
+const nameDiv = document.getElementById('user-name');
+const avatarDiv = document.getElementById('avatar');
 
+const user = getFromLocalStorage('user');
 
-const user = getUser();
+goldDiv.textContent = user.gold;
+repDiv.textContent = user.rep;
+nameDiv.textContent = user.name;
+avatarDiv.src = user.avatarURL;
 
-
-if (isDead(user) || hasCompletedAllQuests(quests, user)) {
-
-    window.location = '../results';
-}
-
-const nav = document.getElementById('quests');
-
-for (let i = 0; i < quests.length; i++) {
-   
-    const quest = quests[i];
-    let questDisplay = null;
-    
-    if (user.completed[quest.id]) {
-       
-        questDisplay = createCompletedQuest(quest);
-    }
-    else {
-    
-        questDisplay = createLink(quest);
-    }
-    nav.appendChild(questDisplay); 
-}
