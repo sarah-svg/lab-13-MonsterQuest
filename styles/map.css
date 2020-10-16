@@ -1,0 +1,53 @@
+#img-group{
+    position: relative;
+    background-image: url("../assets/quests/map.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: calc(90vw * 642 / 600);
+    margin: auto;
+    
+}
+
+#map{
+    position: relative; 
+    z-index: 0;
+    top: 0;
+    left: 0;
+    margin:100px;
+}
+
+#village{
+    position: absolute; 
+    z-index: 4;
+    bottom: 600px;
+    left: 800px;
+    border: 7px solid black;
+}
+
+#travel{
+    position: absolute;
+    z-index: 1;
+    bottom: 630px;
+    left: 465px;
+    border: 7px solid black;
+}
+
+#castle{
+    position: absolute; 
+    z-index: 1;
+    bottom: 775px;
+    left: 800px;
+    border: 7px solid black;
+}
+
+#clown{
+    position: absolute; 
+    z-index: 1;
+    bottom: 1000px;
+    left: 500px;
+    border: 7px solid black;
+}
+.column{
+    font-size: x-large;
+}
