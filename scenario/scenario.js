@@ -15,7 +15,7 @@ avatarDiv.src = user.avatarURL;
 
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
-console.log(id);
+
 let i;
 if (id === 'rome'){
     i = 0;
@@ -99,8 +99,8 @@ mainDiv.appendChild(continueButtonDiv);
 
 optionButtonDiv.addEventListener('click', () => {
     const checkedRadioButton = document.querySelector('input[type=radio]:checked');
-    console.log(checkedRadioButton.id);
-    console.log(scenarios[i].choices);
+
+  
     const text = findByID(scenarios[i].choices, checkedRadioButton.id);
 
     pDiv.textContent = text.outcome;
