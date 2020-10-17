@@ -17,8 +17,8 @@ startButton.addEventListener('click', () => {
         name: '',
         avatar: '',
         avatarURL: '',
-        rep: 50,
-        gold: 50,
+        food: 50,
+        snacks: 50,
         visited: []
     };
 
