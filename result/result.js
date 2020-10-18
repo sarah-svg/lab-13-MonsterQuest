@@ -3,21 +3,21 @@ alert('hello');
 
 import { getFromLocalStorage } from '../utils.js';
 
-let food = [
+let rep = [
     {
-        id: 'high food intake',
+        id: 'high rep intake',
         description: 'You had a awsome run traveling with the gang'
     },
     {
-        id: 'medium food intake',
+        id: 'medium rep intake',
         description: 'You coould have got a better score better luck next time'
     },
     {
-        id: 'low food intake',
+        id: 'low rep intake',
         description: 'Better luck next time'
     },
 ];
-alert('food');
+alert('rep');
 export let snacks = [
     {
         id: 'high scooby snack score',
@@ -34,29 +34,34 @@ export let snacks = [
 ];
 alert('snacks');
   //////////////////////  
-let foodVal = document.getElementById('food-val');
+let repVal = document.getElementById('rep-val');
 let snackVal = document.getElementById('snack-val');
-let name = document.getElementById('name');
+//let name = document.getElementById('name');
 let avatarDiv = document.getElementById('avatar');
+alert('sarah');
 
 let user = getFromLocalStorage('user');
+alert('sarahhhh');
 
-foodVal.textContent = user.food;
+repVal.textContent = user.rep;
+alert('rep-val');
 snackVal.textContent = user.snacks;
-name.textContent = user.name;
+///name.textContent = user.name;
+alert('game');
+alert('heeeeeeee');
 avatarDiv.textContent = user.avatarUrl;
 
 const outcomeDiv = document.getElementById('outcome');
 let outcomeString;
 
 if (user.snacks >= 220){
-    outcomeString = food[0].description;
+    outcomeString = rep[0].description;
 } else if (user.snacks < 220 && user.snacks > 60){
-    outcomeString = food[1].description;
+    outcomeString = rep[1].description;
 } else {
-    outcomeString = food[2].description;
+    outcomeString = rep[2].description;
 }
-
+alert('rep[2]');
 if (user.rep >= 150){
     outcomeString = outcomeString + ' ' + snacks[0].description;
 } else if (user.rep < 150 && user.rep > 70){
@@ -72,6 +77,6 @@ const restart = document.getElementById('restart');
 restart.addEventListener('click', () => {
     window.location.replace('../index.html');
 
-    alert('hello');
+    alert('hi');
 }); console.log('hello');
 

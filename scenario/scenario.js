@@ -1,5 +1,5 @@
 import { findByID, getFromLocalStorage } from '../utils.js';
-import info from '../data/data.js';
+import scenarios from '../data/data.js';
 
 const snackDiv = document.getElementById('snack-val');
 const repDiv = document.getElementById('rep-val');
@@ -9,13 +9,13 @@ const avatarDiv = document.getElementById('avatar');
 const user = getFromLocalStorage('user');
 
 snackDiv.textContent = user.snack;
-repDiv.textContent = user.rep;
+repDiv.textContent = user.foo;
 nameDiv.textContent = user.name;
 avatarDiv.src = user.avatarURL;
 
 const searchParams = new URLSearchParams(window.location.search);
 const id = searchParams.get('id');
-
+console.log(id);
 let i;
 if (id === 'rome'){
     i = 0;
@@ -32,13 +32,13 @@ const mainDiv = document.getElementsByTagName('main')[0];
 
 const labelDiv = document.createElement('label');
 labelDiv.id = 'header';
-labelDiv.textContent = info[i].title;
-alert('hey');
+labelDiv.textContent = scenarios[i].title;
+
 const imgDiv = document.createElement('img');
-imgDiv.src = info[i].image;
+imgDiv.src = scenarios[i].image;
 
 const pDiv = document.createElement('p');
-pDiv.textContent = info[i].description;
+pDiv.textContent = scenarios[i].description;
 
 const columnDiv = document.createElement('div');
 columnDiv.classList.add('flex-column');
@@ -52,22 +52,22 @@ const inputDiv0 = document.createElement('input');
 inputDiv0.type = 'radio';
 inputDiv0.name = 'options';
 inputDiv0.checked = true;
-inputDiv0.id = info[i].choices[0].id;
+inputDiv0.id = scenarios[i].choices[0].id;
 const inputDiv1 = document.createElement('input');
 inputDiv1.type = 'radio';
 inputDiv1.name = 'options';
-inputDiv1.id = info[i].choices[1].id;
+inputDiv1.id = scenarios[i].choices[1].id;
 const inputDiv2 = document.createElement('input');
 inputDiv2.type = 'radio';
 inputDiv2.name = 'options';
-inputDiv2.id = info[i].choices[2].id;
+inputDiv2.id = scenarios[i].choices[2].id;
 
 const opt0 = document.createElement('label');
-opt0.textContent = info[i].choices[0].description;
+opt0.textContent = scenarios[i].choices[0].description;
 const opt1 = document.createElement('label');
-opt1.textContent = info[i].choices[1].description;
+opt1.textContent = scenarios[i].choices[1].description;
 const opt2 = document.createElement('label');
-opt2.textContent = info[i].choices[2].description;
+opt2.textContent = scenarios[i].choices[2].description;
 
 const optionButtonDiv = document.createElement('button');
 optionButtonDiv.textContent = 'Do it!';
@@ -99,9 +99,9 @@ mainDiv.appendChild(continueButtonDiv);
 
 optionButtonDiv.addEventListener('click', () => {
     const checkedRadioButton = document.querySelector('input[type=radio]:checked');
-
-  
-    const text = findByID(info[i].choices, checkedRadioButton.id);
+    console.log(checkedRadioButton.id);
+    console.log(scenarios[i].choices);
+    const text = findByID(scenarios[i].choices, checkedRadioButton.id);
 
     pDiv.textContent = text.outcome;
     const div = document.getElementsByClassName('flex-column')[1];
@@ -114,15 +114,10 @@ optionButtonDiv.addEventListener('click', () => {
 
 
 continueButtonDiv.addEventListener('click', () => {
-
-    if (user.visited.length === 4) {
-        window.location.replace('../reult/index.html');
-    } else {
-        window.location.replace('../map/map.html');
-    }
+    window.location.foolace('../map/map.html');
 });
 
-alert('conitinue');
+
 
 
 
