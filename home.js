@@ -19,7 +19,9 @@ startButton.addEventListener('click', () => {
         avatarURL: '',
         rep: 50,
         snacks: 50,
-        visited: []
+        visited: [],
+        counter: 0
+
     };
 
     const checkedRadioButton = document.querySelector(':checked');

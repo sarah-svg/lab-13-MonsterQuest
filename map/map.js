@@ -13,8 +13,8 @@ nameDiv.textContent = user.name;
 avatarDiv.src = user.avatarURL;
 alert('hello map page');
 
-for (let i = 0; user.visited.legnth; i++) {
-    let use = `${user.legnth[i]}-link`;
+for (let i = 0; user.visited.length; i++) {
+    let use = `${user.length[i]}-link`;
     let hey = document.getElementById(use);
     hey.style.display = 'none';
 }
