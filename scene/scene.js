@@ -1,4 +1,4 @@
-import { findByID, getFromLocalStorage } from '../utils.js';
+import { findByID, getFromLocalStorage, setInLocalStorage } from '../utils.js';
 import info from '../data/data.js';
 
 const snackDiv = document.getElementById('snack-val');
@@ -114,16 +114,15 @@ optionButtonDiv.addEventListener('click', () => {
 
 
 continueButtonDiv.addEventListener('click', () => {
-
-    if (user.visited.length === 4) {
-        window.location.replace('../reult/index.html');
+    user.counter++;
+    setInLocalStorage('user', user);
+    alert('conitinue2222    user.counter: ' + user.counter);
+    if (user.counter === 4) {
+        window.location.replace('../result/index.html');
     } else {
         window.location.replace('../map/map.html');
     }
 });
-
-alert('conitinue');
-
 
 
 
