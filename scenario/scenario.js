@@ -1,15 +1,15 @@
 import { findByID, getFromLocalStorage } from '../utils.js';
 import scenarios from '../data/data.js';
 
-const goldDiv = document.getElementById('snack-val');
-const repDiv = document.getElementById('food-val');
+const snackDiv = document.getElementById('snack-val');
+const repDiv = document.getElementById('rep-val');
 const nameDiv = document.getElementById('user-name');
 const avatarDiv = document.getElementById('avatar');
 
 const user = getFromLocalStorage('user');
 
-goldDiv.textContent = user.gold;
-repDiv.textContent = user.rep;
+snackDiv.textContent = user.snack;
+repDiv.textContent = user.foo;
 nameDiv.textContent = user.name;
 avatarDiv.src = user.avatarURL;
 
@@ -114,7 +114,7 @@ optionButtonDiv.addEventListener('click', () => {
 
 
 continueButtonDiv.addEventListener('click', () => {
-    window.location.replace('../map/map.html');
+    window.location.foolace('../map/map.html');
 });
 
 
