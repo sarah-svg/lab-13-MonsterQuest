@@ -33,7 +33,7 @@ const mainDiv = document.getElementsByTagName('main')[0];
 const labelDiv = document.createElement('label');
 labelDiv.id = 'header';
 labelDiv.textContent = info[i].title;
-
+alert('hey');
 const imgDiv = document.createElement('img');
 imgDiv.src = info[i].image;
 
